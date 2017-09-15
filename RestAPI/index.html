@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Product App</title>
+</head>
+<body>
+
+    <div>
+        <h2>All Products</h2>
+        <ul id="products" />
+    </div>
+    <div>
+        <h2>Search by ID</h2>
+        <input type="text" id="prodId" size="5" />
+        <input type="button" value="Search" onclick="PostProduct();" />
+        <p id="product" />
+    </div>
+
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.3.min.js"></script>
+    <script>
+        var uri = "http://www.famliytree.cn/api/news/items?index=0&pageSize=6";
+
+        var product = { Name: "11", Price: 22, Category: "22" };
+        function PostProduct() {
+            $.ajax({
+                type: "GET",
+                url: uri,
+                dataType: "json;",
+                success: function (data) {
+                    
+                }
+            });
+            //$.get(uri, function () {
+                 
+            //});
+        }
+
+    </script>
+</body>
+</html>
